@@ -67,7 +67,7 @@ public class AIControl : CharacterControl
 
     private void Update()
     {
-        TickCooldownTimer();
+	rocketCooldownTimer -= Time.deltaTime;
 
         if (!isMoving)
         {

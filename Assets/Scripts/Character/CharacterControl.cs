@@ -13,14 +13,6 @@ public abstract class CharacterControl : MonoBehaviour
 
     public abstract void TakeDamage();
 
-    protected void TickCooldownTimer()
-    {
-        if (rocketCooldownTimer > 0.0f)
-        {
-            rocketCooldownTimer = Mathf.Max(0.0f, rocketCooldownTimer - Time.deltaTime);
-        }
-    }
-
     public bool FireWeapon(Vector3 targetPosition)
     {
         if (rocketCooldownTimer > 0.0f)

@@ -24,7 +24,7 @@ public class PlayerControl : CharacterControl
     // Update is called once per frame
     private void Update()
     {
-        TickCooldownTimer();
+	rocketCooldownTimer -= Time.deltaTime;
 
         // Movement
 	    var inputMovement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
